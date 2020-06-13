@@ -19,3 +19,15 @@
 链接：https://leetcode-cn.com/problems/plus-one
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
+class Solution:
+    def plusOne(self, digits):
+        num = 0
+        for i in range(len(digits)):
+            num += digits[i] * pow(10, (len(digits) - 1 - i))
+        return [int(i) for i in str(num + 1)]
+
+
+s = Solution()
+
+w = [1, 2, 3]
+print(s.plusOne(w))
