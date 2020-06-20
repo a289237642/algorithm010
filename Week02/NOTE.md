@@ -79,7 +79,7 @@ class Solution(object):
 这道题上周我们是通过双端队列来做的，学了“堆”之后，也是可以使用堆来做的，python中实现的堆，是小顶堆，所以对于求最小最大，要灵活运用 相反数 来求解。<br />
 <br />这道题用双端队列来实现，时间复杂度是O(n)，空间复杂度是O(k)，利用堆来实现，时间复杂度是O(nlogn)，空间复杂度是O（n）,所以还是双端队列的实现方式要优于堆实现。
 ```python
-res, heap = [], []
+        res, heap = [], []
 		for i in range(len(nums)):
 			heapq.heappush(heap, ( -nums[i], i))
 			if i + 1 >= k:
