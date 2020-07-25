@@ -60,6 +60,9 @@
 * 优化方式
 1. 将 rank 浅的合并到 rank 深的
 2. 路径压缩
+
+* 并查集代码模板
+
 ```
 def init(p):
     # for i = 0 .. n: p[i] = i
@@ -78,6 +81,7 @@ def parent(self, p, i):
     while p[i] != i:
         x = i; i = p[i]; p[x] = root
     return root
+
 ```
 * 适用场景
 1. 帮派识别：小弟 -> 老大
